@@ -5,9 +5,8 @@ import LoginPage from './components/LoginPage';
 import FacultyDashboard from './components/FacultyDashboard';
 import AdminDashboard from './components/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
-
-import ForgotPassword from './components/ForgotPassword';       // Faculty forgot password
-import AdminForgotPassword from './components/AdminForgotPassword'; // Admin forgot password
+import ForgotPassword from './components/ForgotPassword';
+import AdminForgotPassword from './components/AdminForgotPassword';
 
 function App() {
   return (
@@ -42,8 +41,17 @@ function App() {
         <Route
           path="*"
           element={
-            <div className="p-8 text-center text-red-600 font-bold text-xl">
-              404 - Page Not Found
+            <div className="min-h-screen flex items-center justify-center bg-gray-50">
+              <div className="text-center">
+                <h1 className="text-6xl font-bold text-gray-300 mb-4">404</h1>
+                <p className="text-xl text-gray-600 mb-8">Page Not Found</p>
+                <a
+                  href="/"
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Go Home
+                </a>
+              </div>
             </div>
           }
         />
