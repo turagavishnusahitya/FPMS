@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import LoginPage from './components/LoginPage';
-import FacultyDashboard from './components/FacultyDashboard';
+import EnhancedFacultyDashboard from './components/EnhancedFacultyDashboard';
 import AdminDashboard from './components/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import ForgotPassword from './components/ForgotPassword';
@@ -24,7 +24,7 @@ function App() {
           path="/faculty"
           element={
             <ProtectedRoute allowedRole="faculty">
-              <FacultyDashboard />
+              <EnhancedFacultyDashboard />
             </ProtectedRoute>
           }
         />
