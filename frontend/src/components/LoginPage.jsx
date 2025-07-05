@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, EyeOff, User, Lock, GraduationCap, Shield, ArrowRight } from 'lucide-react';
+import { Eye, EyeOff, User, Lock, GraduationCap, Shield, ArrowRight, UserPlus } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 import AnimatedBackground from './AnimatedBackground';
 import AnimatedButton from './AnimatedButton';
@@ -245,6 +245,27 @@ const LoginPage = () => {
                         className={`text-sm ${type === 'faculty' ? 'text-blue-600 hover:text-blue-700' : 'text-purple-600 hover:text-purple-700'} font-medium transition-colors duration-200`}
                       >
                         Forgot your password?
+                      </Link>
+                    </motion.div>
+
+                    {/* Signup Link */}
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.5 }}
+                      className="text-center pt-4 border-t border-gray-200"
+                    >
+                      <p className="text-gray-600 mb-3">
+                        Don't have an account?
+                      </p>
+                      <Link to="/signup">
+                        <AnimatedButton
+                          variant="outline"
+                          icon={UserPlus}
+                          className="w-full"
+                        >
+                          Create New Account
+                        </AnimatedButton>
                       </Link>
                     </motion.div>
                   </motion.form>
